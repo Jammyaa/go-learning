@@ -42,4 +42,9 @@ func main() {
 		{9, false},
 	}
 	fmt.Println(s)
+	fmt.Printf("%T %T\n", s, names)
+	// Slice defaults
+	v := [4]int{12, 24, 35, 46}
+	fmt.Println(v[0:4], v[:], v[:4], v[0:])
+
 }
