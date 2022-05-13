@@ -62,6 +62,10 @@ func main() {
 	// Drop its first two values.
 	t = t[2:]
 	printSlice(t)
+
+	// Nil slices
+	var nils []int
+	fmt.Println(nils, len(nils), cap(nils))
 }
 
 func printSlice(s []int) {
