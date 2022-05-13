@@ -47,4 +47,23 @@ func main() {
 	v := [4]int{12, 24, 35, 46}
 	fmt.Println(v[0:4], v[:], v[:4], v[0:])
 
+	// Slice length and capacity
+	t := []int{2, 3, 5, 7, 11, 13}
+	printSlice(t)
+
+	// Slice the slice to give it zero length.
+	t = t[:0]
+	printSlice(t)
+
+	// Extend its length.
+	t = t[:4]
+	printSlice(t)
+
+	// Drop its first two values.
+	t = t[2:]
+	printSlice(t)
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
