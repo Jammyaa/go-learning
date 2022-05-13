@@ -66,6 +66,19 @@ func main() {
 	// Nil slices
 	var nils []int
 	fmt.Println(nils, len(nils), cap(nils))
+
+	// Using make function to create a slice
+	u := make([]int, 5) // allocate a zeroed array
+	printSlice(u)
+
+	w := make([]int, 0, 5) // specify len and cap of slices
+	printSlice(w)
+
+	w = w[:cap(w)]
+	printSlice(w)
+
+	w = w[1:]
+	printSlice(w)
 }
 
 func printSlice(s []int) {
