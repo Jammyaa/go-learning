@@ -104,6 +104,22 @@ func main() {
 	for i := 0; i < len(board); i++ {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
+
+	// Appending to a slice
+	var nils2 []int
+	printSlice(nils2)
+
+	// append works on nil slices.
+	nils2 = append(nils2, 0)
+	printSlice(nils2)
+
+	// The slice grows as needed.
+	nils2 = append(nils2, 1)
+	printSlice(nils2)
+
+	// We can add more than one element at a time.
+	nils2 = append(nils2, 2, 3, 4)
+	printSlice(nils2)
 }
 
 func printSlice(s []int) {
