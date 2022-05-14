@@ -23,4 +23,19 @@ func main() {
 	}
 	fmt.Println(m)
 	fmt.Println(m["Notional Labs"])
+
+	// map literals
+	var m2 = map[string]Vertex{
+		"Chinh": Vertex{
+			200, 300,
+		},
+		"Vinh": Vertex{
+			400, 500,
+		},
+		"Son": Vertex{
+			500, 600,
+		},
+	}
+
+	fmt.Println(m2)
 }
