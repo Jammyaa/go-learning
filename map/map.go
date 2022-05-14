@@ -46,4 +46,17 @@ func main() {
 		"Google":    {37.42202, -122.08408},
 	}
 	fmt.Println(m3)
+
+	// Mutating Maps
+	m4 := make(map[string]int)
+	m4["answer"] = 48
+
+	// Test that a key is present with a two-value assignment: elem, ok = m[key]
+	v, ok := m4["answer"]
+	fmt.Println(v, ok)
+
+	// Delete an element: delete(m, key)
+	delete(m4, "answer")
+	v, ok = m4["answer"]
+	fmt.Println(v, ok)
 }
