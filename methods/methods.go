@@ -51,7 +51,7 @@ func main() {
 	f := MyFloat(-math.Sqrt2)
 	fmt.Println(f.Abs())
 
-	v.Scale(5)
+	v.Scale(5) // For the statement v.Scale(5), even though v is a value and not a pointer, the method with the pointer receiver is called automatically.
 	fmt.Println(v)
 	fmt.Println(v.Abs())
 
