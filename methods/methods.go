@@ -16,12 +16,23 @@ type Vertex struct {
 	X, Y float64
 }
 
+type MyFloat float64
+
 // This is a method
 func (v Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+
 func main() {
 	v := Vertex{5, 12}
 	fmt.Println(v.Abs())
+	f := MyFloat(-math.Sqrt2)
+	fmt.Println(f.Abs())
 }
